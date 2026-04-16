@@ -2299,14 +2299,14 @@
 }
 @keyframes fadeIn { from { opacity: 0; transform: translateX(10px); } to { opacity: 1; transform: translateX(0); } }
 /* =========================================
-   FIX MOBILE HEADER ALIGNMENT (Logo & Hamburger)
+   FIX MOBILE HEADER ALIGNMENT (Logo Centered, Hamburger Right)
 ========================================= */
 @media (max-width: 992px) {
   /* Force the header into a single horizontal row */
   .site-header .header-inner {
     position: relative !important;
     display: flex !important;
-    flex-direction: row !important; /* Overrides the mobile column stacking */
+    flex-direction: row !important;
     justify-content: center !important;
     align-items: center !important;
     padding: 14px 15px !important;
@@ -2320,7 +2320,7 @@
     padding: 0 !important;
   }
   
-  /* Neutralize the right container so it doesn't take up ghost space */
+  /* Neutralize the right container */
   .site-header .header-right {
     position: static !important;
     width: 0 !important;
@@ -2329,10 +2329,11 @@
     gap: 0 !important;
   }
 
-  /* Pin the Hamburger menu to the exact vertical center on the left */
+  /* Pin the Hamburger menu to the exact vertical center on the RIGHT */
   .site-header .mobile-menu-toggle {
     position: absolute !important;
-    right: 15 px !important;
+    right: 15px !important; /* Moves the icon to the right edge */
+    left: auto !important;  /* Ensures left alignment is cleared */
     top: 50% !important;
     transform: translateY(-50%) !important;
     margin: 0 !important;
