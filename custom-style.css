@@ -2332,7 +2332,7 @@
   /* Pin the Hamburger menu to the exact vertical center on the left */
   .site-header .mobile-menu-toggle {
     position: absolute !important;
-    left: 15px !important;
+    right: 15px !important;
     top: 50% !important;
     transform: translateY(-50%) !important;
     margin: 0 !important;
